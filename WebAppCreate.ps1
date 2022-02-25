@@ -11,8 +11,8 @@ if ($notPresent)
     New-AzResourceGroup -Name $rgname -Location $location
 }
 
-# Create an App Service plan in S1 tier
-New-AzAppServicePlan -Name $webappname -Location $location -ResourceGroupName $rgname -Tier S1
+# Create an App Service plan in Free tier
+New-AzAppServicePlan -Name $webappname -Location $location -ResourceGroupName $rgname -Tier Free
 
 # Create a web app
 New-AzWebApp -Name $webappname -Location $location -AppServicePlan $webappname -ResourceGroupName $rgname
